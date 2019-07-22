@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_face_black_24dp"
+        android:title="Me" />
+
+
+    <item
+        android:id="@+id/navigation_ongoing"
+        android:icon="@drawable/ic_timer_black_24dp"
+        android:title="LIVE" />
+    <item
+        android:id="@+id/navigation_play"
+        android:icon="@drawable/cc"
+        android:title="Play" />
+
+
+    <item
+        android:id="@+id/navigation_participated"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="JOINED" />
+    <item
+        android:id="@+id/navigation_result"
+        android:icon="@drawable/result_24dp"
+        android:title="Result" />
+
+</menu>
