@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.e.mysimmer.LalitRecyclerView;
@@ -70,6 +72,9 @@ public class PlayFragment extends Fragment {
     Result result;
     DbHelper dbHelper;
     ServiceCaller serviceCaller;
+    RadioGroup radio_grp;
+    RadioButton all, solo, duo, squad;
+    String type = "all";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -115,11 +120,35 @@ public class PlayFragment extends Fragment {
                 noDataFound();
             }
         }
+        radio_grp = view.findViewById(R.id.radio_grp);
+        all = view.findViewById(R.id.all);
+        solo = view.findViewById(R.id.solo);
+        duo = view.findViewById(R.id.duo);
+        squad = view.findViewById(R.id.squad);
+        radio_grp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                int id = radio_grp.getCheckedRadioButtonId();
+                if (id == R.id.all) {
+                    type = "all";
+                    getDataList();
+                } else if (id == R.id.solo) {
+                    type = "solo";
+                    getDataList();
+                } else if (id == R.id.duo) {
+                    type = "duo";
+                    getDataList();
+                } else {
+                    type = "squad";
+                    getDataList();
+                }
+            }
+        });
     }
 
     private void getDataList() {
         resultListPlay.clear();
-        serviceCaller.callPlayMatchService("1", result.getId(), new IAsyncWorkCompletedCallback() {
+        serviceCaller.callPlayMatchService("1", result.getId(),type, new IAsyncWorkCompletedCallback() {
             @Override
             public void onDone(String workName, boolean isComplete) {
                 if (isComplete) {

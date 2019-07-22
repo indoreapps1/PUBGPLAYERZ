@@ -27,5 +27,8 @@
         <item name="android:windowIsFloating">true</item>
     </style>
 
-
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+    </style>
 </resources>

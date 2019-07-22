@@ -262,7 +262,7 @@ public class ServiceCaller {
     }
 
     //    call All login data
-    public void callPlayMatchService(final String status, final int id, final IAsyncWorkCompletedCallback workCompletedCallback) {
+    public void callPlayMatchService(final String status, final int id, final String type, final IAsyncWorkCompletedCallback workCompletedCallback) {
         final String url = Contants.SERVICE_BASE_URL + Contants.getAllPlayLIst;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -288,6 +288,7 @@ public class ServiceCaller {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("status", status);
                 params.put("id", String.valueOf(id));
+                params.put("type", type);
                 return params;
             }
         };

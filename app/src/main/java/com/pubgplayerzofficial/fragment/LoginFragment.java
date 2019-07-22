@@ -83,7 +83,7 @@ public class LoginFragment extends Fragment {
         Button btn_sign = view.findViewById(R.id.btn_sign);
         Button btn_login = view.findViewById(R.id.btn_login);
         TextView resetnow = view.findViewById(R.id.resetnow);
-        TextView resetu = view.findViewById(R.id.resetu);
+        TextView resetu = view.findViewById(R.id.resetUserName);
         edt_username = view.findViewById(R.id.edt_username);
         edt_pass = view.findViewById(R.id.edt_pass);
         resetnow.setOnClickListener(new View.OnClickListener() {

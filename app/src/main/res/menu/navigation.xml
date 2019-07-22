@@ -14,7 +14,7 @@
         android:title="LIVE" />
     <item
         android:id="@+id/navigation_play"
-        android:icon="@drawable/cc"
+        android:icon="@drawable/play_ames"
         android:title="Play" />
 
 
@@ -24,7 +24,7 @@
         android:title="JOINED" />
     <item
         android:id="@+id/navigation_result"
-        android:icon="@drawable/result_24dp"
+        android:icon="@drawable/ic_result_black_24dp"
         android:title="Result" />
 
 </menu>

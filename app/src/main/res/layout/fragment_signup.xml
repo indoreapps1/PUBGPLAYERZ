@@ -21,8 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight=".15"
-                android:gravity="center|top"
+                android:layout_weight=".1"
+                android:gravity="center"
                 android:text="CREATE NEW ACCOUNT"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight=".5"
+                android:layout_weight=".8"
                 android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
@@ -47,6 +47,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fillViewport="true"
+                        android:overScrollMode="never"
                         android:fitsSystemWindows="true">
 
                         <LinearLayout
@@ -170,7 +171,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="50dp"
                                 android:layout_margin="10dp"
-                                android:background="@drawable/done_corner_round_acent"
+                                android:background="@drawable/drawable_btn_register"
                                 android:text="Register"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="16sp"
@@ -186,7 +187,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".15" />
+                android:layout_weight=".1" />
         </LinearLayout>
 
         <LinearLayout
@@ -195,6 +196,7 @@
             android:background="@drawable/circle"
             android:orientation="vertical"
             android:gravity="center"
+            android:visibility="gone"
             app:layout_anchor="@id/tv_title"
             app:layout_anchorGravity="center|bottom">
 
@@ -213,9 +215,9 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
-        android:background="@drawable/done_corner_round_acent"
+        android:background="@drawable/drawable_btn_login"
         android:text="sign in"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold" />
 

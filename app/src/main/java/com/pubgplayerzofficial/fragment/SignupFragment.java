@@ -296,7 +296,7 @@ public class SignupFragment extends Fragment {
     public void moveFragment(Fragment fragment) {
         FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_up)
+//                .setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_up)
                 .replace(R.id.loginactivity, fragment)
                 .addToBackStack(null)
                 .commitAllowingStateLoss();

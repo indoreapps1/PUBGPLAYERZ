@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".activity.ChooserActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.10"
+        android:gravity="center"
+        android:text="WELCOME TO"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.66"
+        android:layout_marginLeft="@dimen/dim_value_20"
+        android:layout_marginRight="@dimen/dim_value_20"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btn_create_acc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="0.07"
+        android:background="@drawable/drawable_btn_register"
+        android:text="Create Account"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:layout_weight="0.07"
+        android:background="@drawable/drawable_btn_login"
+        android:text="Sign in"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10">
+
+    </LinearLayout>
+
+
+</LinearLayout>
