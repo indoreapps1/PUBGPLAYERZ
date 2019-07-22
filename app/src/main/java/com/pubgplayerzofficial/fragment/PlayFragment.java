@@ -97,7 +97,6 @@ public class PlayFragment extends Fragment {
         layout = view.findViewById(R.id.layout);
         lalitRecyclerView = view.findViewById(R.id.recyleview);
         lalitRecyclerView.setLayoutManager(new LinearLayoutManager(context));
-        lalitRecyclerView.showShimmerAdapter();
         getDataList();
         lalitRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -148,6 +147,7 @@ public class PlayFragment extends Fragment {
 
     private void getDataList() {
         resultListPlay.clear();
+        lalitRecyclerView.showShimmerAdapter();
         serviceCaller.callPlayMatchService("1", result.getId(),type, new IAsyncWorkCompletedCallback() {
             @Override
             public void onDone(String workName, boolean isComplete) {
@@ -160,11 +160,12 @@ public class PlayFragment extends Fragment {
                         Collections.reverse(resultListPlay);
                         GameViewerAdapter gameViewerAdapter = new GameViewerAdapter(context, resultListPlay);
                         lalitRecyclerView.setAdapter(gameViewerAdapter);
-                        lalitRecyclerView.hideShimmerAdapter();
+
                     }
                 } else {
                     noDataFound();
                 }
+                lalitRecyclerView.hideShimmerAdapter();
             }
         });
     }
