@@ -130,7 +130,7 @@ public class MatchResultFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                if (youtube_url != null && !youtube_url.equalsIgnoreCase("")) {
-                String url = "https://www.youtube.com/channel/UCRqJGFT4-L4k9F5tIuhGYOA";
+                String url = "https://www.youtube.com/channel/UCfol1h--DajZmpZRlqA5TqQ";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 if (intent.resolveActivity(context.getPackageManager()) != null) {
                     context.startActivity(intent);
