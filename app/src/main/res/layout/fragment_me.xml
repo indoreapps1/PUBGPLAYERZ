@@ -738,7 +738,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:gravity="center"
-                        android:text="App Version:v1"
+                        android:text="App Version:v2"
                         android:textColor="@color/colorBlack"
                         android:textSize="10sp"
                         android:textStyle="bold" />
