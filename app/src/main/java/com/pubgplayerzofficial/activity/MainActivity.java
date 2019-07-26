@@ -533,9 +533,13 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(s));
-                startActivity(intent);
+                Intent rcp = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
+                if (rcp.resolveActivity(getPackageManager()) != null) {
+                    startActivity(rcp);
+                }
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse(s));
+//                startActivity(intent);
 //                alert.dismiss();
             }
         });
