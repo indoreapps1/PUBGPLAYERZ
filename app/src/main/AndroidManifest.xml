@@ -53,6 +53,7 @@
             </intent-filter>
         </service>
         <activity android:name=".activity.ChooserActivity"></activity>
+        <activity android:name=".activity.NewsActivity"></activity>
 
     </application>
 

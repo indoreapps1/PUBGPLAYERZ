@@ -377,7 +377,7 @@ public class ServiceCaller {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                workCompletedCallback.onDone(error.getMessage(), false);
+                workCompletedCallback.onDone(error.toString(), false);
             }
         }) {
             @Override

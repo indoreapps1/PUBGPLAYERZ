@@ -24,6 +24,7 @@ import com.google.gson.Gson;
 import com.pubgplayerzofficial.R;
 import com.pubgplayerzofficial.activity.LoginActivity;
 import com.pubgplayerzofficial.activity.MainActivity;
+import com.pubgplayerzofficial.activity.NewsActivity;
 import com.pubgplayerzofficial.activity.SplashActivity;
 import com.pubgplayerzofficial.database.DbHelper;
 import com.pubgplayerzofficial.framework.IAsyncWorkCompletedCallback;
@@ -279,8 +280,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                 moveFragment(reportFragment);
                 break;
             case R.id.card_news:
-                NewsFragment newsFragment = NewsFragment.newInstance("", "");
-                moveFragment(newsFragment);
+                startActivity(new Intent(context, NewsActivity.class));
                 break;
         }
     }

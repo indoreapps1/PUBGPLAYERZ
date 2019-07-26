@@ -146,9 +146,13 @@ public class PlayFragment extends Fragment {
     }
 
     private void getDataList() {
+        if (lalitRecyclerView.getParent() == null) {
+            layout.removeAllViews();
+            layout.addView(lalitRecyclerView);
+        }
         resultListPlay.clear();
         lalitRecyclerView.showShimmerAdapter();
-        serviceCaller.callPlayMatchService("1", result.getId(),type, new IAsyncWorkCompletedCallback() {
+        serviceCaller.callPlayMatchService("1", result.getId(), type, new IAsyncWorkCompletedCallback() {
             @Override
             public void onDone(String workName, boolean isComplete) {
                 if (isComplete) {

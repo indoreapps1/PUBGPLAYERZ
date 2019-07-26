@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -55,6 +57,10 @@ import com.pubgplayerzofficial.utilities.NetworkChecker;
 import com.pubgplayerzofficial.utilities.Utility;
 import com.pubgplayerzofficial.utilities.WSCallerVersionListener;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import es.dmoral.toasty.Toasty;
 
 
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
     private LinearLayout layout;
     private BroadcastReceiver mNetworkReceiver;
     DbHelper dbHelper;
+    String versionOld;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -486,13 +493,27 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
 
     public void checkForceUpdate() {
+
+        final List<Result> resultList = new ArrayList<>();
         if (Utility.isOnline(MainActivity.this)) {
             ServiceCaller serviceCaller = new ServiceCaller(this);
             serviceCaller.callupdateService(new IAsyncWorkCompletedCallback() {
                 @Override
                 public void onDone(String workName, boolean isComplete) {
                     if (!workName.trim().equalsIgnoreCase("no")) {
-                        showUpdateDialog(workName);
+                        ContentData contentData = new Gson().fromJson(workName, ContentData.class);
+                        for (Result result : contentData.getResult()) {
+                            resultList.addAll(Arrays.asList(result));
+                        }
+                        try {
+                            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+                            versionOld = pInfo.versionName;
+                        } catch (PackageManager.NameNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                        if (Float.parseFloat(resultList.get(resultList.size() - 1).getVersion()) > Float.parseFloat(versionOld)) {
+                            showUpdateDialog(resultList.get(resultList.size() - 1).getUrl());
+                        }
                     }
                 }
             });

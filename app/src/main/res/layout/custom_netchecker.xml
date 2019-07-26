@@ -71,7 +71,7 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:text="PLEASE TURN ON"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorBlack"
             android:textSize="19sp"
             android:textStyle="normal" />
 
