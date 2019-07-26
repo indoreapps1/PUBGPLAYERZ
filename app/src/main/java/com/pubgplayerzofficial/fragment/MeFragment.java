@@ -69,7 +69,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
     private Context context;
     private TextView tv_amount, tv_kill, tv_won, tv_username, tv_email, tv_total_match;
     private NestedScrollView nestedscroll;
-    private CardView card_earn, card_report, card_wallet, card_rcp, card_pp,card_profile, card_Statistics, card_toplayer, card_aboutus, card_support, card_tc, card_share, card_logout;
+    private CardView card_earn, card_report, card_wallet, card_rcp, card_pp, card_profile, card_Statistics, card_toplayer, card_aboutus, card_support, card_tc, card_share, card_logout, card_news;
     private LinearLayout layout_won, layout_totalKill, layout_matchPlayer;
     private DbHelper dbHelper;
     private Result result;
@@ -108,6 +108,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
         card_report = view.findViewById(R.id.card_report);
         card_rcp = view.findViewById(R.id.card_rcp);
         card_pp = view.findViewById(R.id.card_pp);
+        card_news = view.findViewById(R.id.card_news);
         layout_won = view.findViewById(R.id.layout_won);
         layout_totalKill = view.findViewById(R.id.layout_totalKill);
         layout_matchPlayer = view.findViewById(R.id.layout_matchPlayer);
@@ -128,6 +129,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
         card_report.setOnClickListener(this);
         card_rcp.setOnClickListener(this);
         card_pp.setOnClickListener(this);
+        card_news.setOnClickListener(this);
         nestedscroll = view.findViewById(R.id.nestedscroll);
         setvalue();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -275,6 +277,10 @@ public class MeFragment extends Fragment implements View.OnClickListener {
             case R.id.card_report:
                 ReportFragment reportFragment = ReportFragment.newInstance("", "");
                 moveFragment(reportFragment);
+                break;
+            case R.id.card_news:
+                NewsFragment newsFragment = NewsFragment.newInstance("", "");
+                moveFragment(newsFragment);
                 break;
         }
     }

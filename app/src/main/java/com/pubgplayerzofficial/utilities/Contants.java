@@ -58,6 +58,7 @@ public class Contants {
     public static final String update = "update.php";
     public static final String checkSlot = "checkSlot.php";
     public static final String checkSession = "checkSession.php";
+    public static final String getNews = "getNews.php";
 
     public static final String patyurl = "http://pubgplayerz.com/gateway.php?";
 }

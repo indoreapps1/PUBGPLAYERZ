@@ -13,4 +13,8 @@
     <string name="update2">An update version of the app is now available.</string>
     <string name="remind_me_later">Remind me Later</string>
     <string name="update_text">Update Now</string>
+
+
+    <string name="admob_app_id">ca-app-pub-7839309444158969~4569202806</string>
+    <string name="interstitial_full_screen">ca-app-pub-7839309444158969/7331097514</string>
 </resources>

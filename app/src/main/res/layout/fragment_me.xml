@@ -326,6 +326,51 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/card_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight=".08"
+                                android:background="@drawable/ic_poll_black_24dp"
+                                android:gravity="right"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".8"
+                                android:gravity="left|center"
+                                android:paddingLeft="10dp"
+                                android:text="Pubg News"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight=".12"
+                                android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:gravity="center"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
                         android:id="@+id/card_aboutus"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
@@ -459,6 +504,7 @@
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/card_rcp"
                         android:layout_width="match_parent"
@@ -466,6 +512,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="20dp"
+                        android:visibility="gone"
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
@@ -503,6 +550,7 @@
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/card_pp"
                         android:layout_width="match_parent"
@@ -510,6 +558,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="20dp"
+                        android:visibility="gone"
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
@@ -547,6 +596,7 @@
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/card_report"
                         android:layout_width="match_parent"
@@ -718,8 +768,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="4dp"
                         android:layout_weight=".35"
-                        android:gravity="center"
                         android:background="@drawable/done_corner_round_acent"
+                        android:gravity="center"
                         android:orientation="vertical">
 
                         <TextView

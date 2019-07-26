@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight=".15"
+                android:layout_weight=".2"
                 android:gravity="center"
                 android:text="CREATE NEW ACCOUNT"
                 android:textColor="@android:color/white"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight=".7"
+                android:layout_weight=".6"
                 android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
@@ -47,8 +47,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fillViewport="true"
-                        android:overScrollMode="never"
-                        android:fitsSystemWindows="true">
+                        android:fitsSystemWindows="true"
+                        android:overScrollMode="never">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -72,6 +72,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:hint="Full Name"
+                                        android:singleLine="true"
                                         android:textSize="14sp"
                                         android:textStyle="normal" />
                                 </android.support.design.widget.TextInputLayout>
@@ -102,6 +103,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:hint="UserName"
+                                    android:singleLine="true"
                                     android:textSize="14sp"
                                     android:textStyle="normal" />
                             </android.support.design.widget.TextInputLayout>
@@ -116,6 +118,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:hint="Email Address"
+                                    android:singleLine="true"
                                     android:textSize="14sp"
                                     android:textStyle="normal" />
                             </android.support.design.widget.TextInputLayout>
@@ -149,6 +152,7 @@
                                     android:drawablePadding="10dp"
                                     android:hint="Password"
                                     android:inputType="textPassword"
+                                    android:singleLine="true"
                                     android:textSize="16sp" />
                             </android.support.design.widget.TextInputLayout>
 
@@ -162,6 +166,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:hint="Promo Code (Optional)"
+                                    android:singleLine="true"
                                     android:textSize="14sp"
                                     android:textStyle="normal" />
                             </android.support.design.widget.TextInputLayout>
@@ -184,18 +189,30 @@
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".15" />
+                android:layout_weight=".2"
+                android:gravity="center|top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:padding="@dimen/dim_value_10"
+                    android:text="Ques : Are you getting signup error ? \n Ans : Use mobile data instead of wifi at the time of Signup."
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/circle"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:visibility="gone"
             app:layout_anchor="@id/tv_title"
             app:layout_anchorGravity="center|bottom">

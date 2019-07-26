@@ -22,9 +22,14 @@ import android.widget.EditText;
 import com.pubgplayerzofficial.R;
 import com.pubgplayerzofficial.framework.IAsyncWorkCompletedCallback;
 import com.pubgplayerzofficial.framework.ServiceCaller;
+import com.pubgplayerzofficial.framworkretrofit.ApiClient;
+import com.pubgplayerzofficial.framworkretrofit.ApiInterface;
 import com.pubgplayerzofficial.utilities.Utility;
 
 import es.dmoral.toasty.Toasty;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignupFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -142,14 +147,14 @@ public class SignupFragment extends Fragment {
                     progressDialog.dismiss();
                 }
             });
-//
+
 //            ApiInterface apiInterface = ApiClient.getAPIClient().create(ApiInterface.class);
 //
 //            apiInterface.getRegister(firstName, deviceId, userName, email, phone, pass, promocode).enqueue(new Callback<String>() {
 //                @Override
-//                public void onResponse(Call<String> call, retrofit2.Response<String> response) {
+//                public void onResponse(Call<String> call, Response<String> response) {
 //                    String workName = response.body();
-//                    Toasty.info(context,workName).show();
+//                    Toasty.info(context, workName).show();
 //                    if (workName != null) {
 //                        if (workName.trim().equalsIgnoreCase("d")) {
 //                            edit_first_name.setError("Your Device Already Used");
@@ -175,9 +180,8 @@ public class SignupFragment extends Fragment {
 //
 //                }
 //
-//                @Override
-//                public void onFailure(Call<String> call, Throwable t) {
-//                    Toasty.error(context, "Your Connection Slow ! Time Out").show();
+//                public void onFailure(retrofit2.Call<String> call, Throwable t) {
+//                    Toasty.error(context, "Your Connection Slow ! Time Out"+t.toString()).show();
 //                    progressDialog.dismiss();
 //
 //                }
