@@ -129,7 +129,7 @@ public class OngoingMatchViewFragment extends Fragment {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = " https://www.youtube.com/channel/UCfol1h--DajZmpZRlqA5TqQ";
+                String url = "https://www.youtube.com/channel/UCfol1h--DajZmpZRlqA5TqQ";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 if (intent.resolveActivity(context.getPackageManager()) != null) {
                     context.startActivity(intent);

@@ -90,12 +90,12 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                 case R.id.navigation_result:
                     ResultFragment resultFragment = ResultFragment.newInstance("", "");
                     moveFragment(resultFragment);
-                    setTitle("Result");
+                    setTitle("RESULT");
                     return true;
                 case R.id.navigation_me:
                     MeFragment meFragment = MeFragment.newInstance("", "");
                     moveFragment(meFragment);
-                    setTitle("Me");
+                    setTitle("ME");
                     return true;
             }
             return false;

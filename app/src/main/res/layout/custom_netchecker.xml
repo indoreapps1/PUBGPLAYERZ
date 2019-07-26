@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/colorBlue"
+    android:background="#E6E6E6"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
     android:gravity="center"
@@ -32,7 +32,7 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="center|top"
             android:text="Play And Earn Money"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorBlack"
             android:textSize="28sp"
             android:textStyle="normal" />
 
@@ -47,7 +47,7 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:text="NO INTERNET"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorBlack"
             android:textSize="24sp"
             android:textStyle="normal" />
 
@@ -59,7 +59,7 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:text="You Are not connected to the Internet "
-            android:textColor="@color/colorwhiteDark"
+            android:textColor="@color/colorBlack"
             android:textSize="19sp"
             android:textStyle="normal" />
 

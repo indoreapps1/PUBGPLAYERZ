@@ -98,7 +98,7 @@ public class NewsFragment extends Fragment {
     }
 
     private void showInterstitial() {
-        if (mInterstitialAd.isLoaded()) {
+        if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         }
     }
