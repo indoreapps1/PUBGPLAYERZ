@@ -437,6 +437,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             ((BottomNavigationView) this.findViewById(R.id.navigation)).setSelectedItemId(R.id.navigation_result);
 //            hideShowNav(false);
         }
+
         if (fragmentparti != null) {
             openMain();
 //            ParticipatedFragment onGoingFragment = ParticipatedFragment.newInstance("", "");
