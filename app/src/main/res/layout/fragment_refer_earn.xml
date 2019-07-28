@@ -51,7 +51,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
-                <com.pubgplayerzofficial.utilities.CircleImageView
+                <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
