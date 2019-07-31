@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "687270650798",
-    "firebase_url": "https://pubgplayerz.firebaseio.com",
-    "project_id": "pubgplayerz",
-    "storage_bucket": "pubgplayerz.appspot.com"
+    "project_number": "104530642788",
+    "firebase_url": "https://pubgplayerz000.firebaseio.com",
+    "project_id": "pubgplayerz000",
+    "storage_bucket": "pubgplayerz000.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:687270650798:android:2fe8ccf2a374e4e6",
+        "mobilesdk_app_id": "1:104530642788:android:2dd0e70917088338",
         "android_client_info": {
-          "package_name": "com.pubgplayerzofficial"
+          "package_name": "com.pubgplayerzfinalapk"
         }
       },
       "oauth_client": [
         {
-          "client_id": "687270650798-iokrudpfe592p14t8di7cgrlhdler9l5.apps.googleusercontent.com",
+          "client_id": "104530642788-ctjofnin7cog2un02kn4nl0egn3h60he.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDM_m4fqv8voq0qSjWXh9TQXGPIQZuysa4"
+          "current_key": "AIzaSyD-7NTibcL5qOjKH99C_jxus4DqGu_ogkM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "687270650798-iokrudpfe592p14t8di7cgrlhdler9l5.apps.googleusercontent.com",
+              "client_id": "104530642788-ctjofnin7cog2un02kn4nl0egn3h60he.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
