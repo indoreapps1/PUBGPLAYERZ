@@ -55,6 +55,7 @@
             android:layout_marginRight="@dimen/dim_value_10"
             android:layout_marginBottom="@dimen/dim_value_5"
             android:gravity="center"
+            app:passwordToggleTint="@color/colorWhite"
             android:textColorHint="@color/colorWhite"
             app:passwordToggleEnabled="true">
 
