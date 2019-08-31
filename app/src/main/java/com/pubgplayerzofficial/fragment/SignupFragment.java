@@ -191,56 +191,54 @@ public class SignupFragment extends Fragment {
     }
 
     private void showOtpPopUp() {
-        final Dialog dialog = new Dialog(context);
-        dialog.setContentView(R.layout.custom_otp_dialog);
-        dialog.show();
-        Button cancel = dialog.findViewById(R.id.btn_cancel);
-        Button reset = dialog.findViewById(R.id.btn_verify);
-        final EditText edit_otp = dialog.findViewById(R.id.edit_otp);
-        Window window = dialog.getWindow();
-        window.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        window.setGravity(Gravity.CENTER);
-        dialog.setCancelable(false);
+//        final Dialog dialog = new Dialog(context);
+//        dialog.setContentView(R.layout.custom_otp_dialog);
+//        dialog.show();
+//        Button cancel = dialog.findViewById(R.id.btn_cancel);
+//        Button reset = dialog.findViewById(R.id.btn_verify);
+//        final EditText edit_otp = dialog.findViewById(R.id.edit_otp);
+//        Window window = dialog.getWindow();
+//        window.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//        window.setGravity(Gravity.CENTER);
+//        dialog.setCancelable(false);
         //remove singupdate if not otp verify....
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
+//        cancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialog.dismiss();
+//            }
+//        });
         //opt verify serice......
-        reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (edit_otp.getText().toString().length() != 0) {
-                    final ProgressDialog progressDialog = new ProgressDialog(context);
-                    progressDialog.setMessage("Otp Verifying");
-                    progressDialog.setCancelable(false);
-                    progressDialog.show();
+//        reset.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (edit_otp.getText().toString().length() != 0) {
+        final ProgressDialog progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Signup Wait");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
 
-                    ServiceCaller serviceCaller = new ServiceCaller(context);
-                    serviceCaller.callOtpVerifiyService(firstName, userName.toLowerCase(), email.toLowerCase(), phone, pass, promocode, edit_otp.getText().toString(), deviceId, new IAsyncWorkCompletedCallback() {
-                        @Override
-                        public void onDone(String workName, boolean isComplete) {
-                            if (isComplete) {
-                                if (workName.equalsIgnoreCase("no")) {
-                                    edit_otp.setError("Enter Correct Otp");
-                                    edit_otp.requestFocus();
-                                } else {
+        ServiceCaller serviceCaller = new ServiceCaller(context);
+        serviceCaller.callOtpVerifiyService(firstName, userName.toLowerCase(), email.toLowerCase(), phone, pass, promocode, deviceId, new IAsyncWorkCompletedCallback() {
+            @Override
+            public void onDone(String workName, boolean isComplete) {
+                if (isComplete) {
+                    if (!workName.equalsIgnoreCase("no")) {
+//                                    edit_otp.setError("Enter Correct Otp");
+//                                    edit_otp.requestFocus();
+//                                } else {
 //                                    if (workName.equalsIgnoreCase("ok")) {
-                                    dialog.dismiss();
-                                    LoginFragment loginFragment = LoginFragment.newInstance("", "");
-                                    moveFragment(loginFragment);
+//                                    dialog.dismiss();
+                        Toasty.success(context, "Register Successfull").show();
+                        LoginFragment loginFragment = LoginFragment.newInstance("", "");
+                        moveFragment(loginFragment);
 //                                    }
-                                }
-                            } else {
-                                Toasty.error(context, "Otp Error Try Again").show();
-                            }
-                            progressDialog.dismiss();
-                        }
-                    });
-                } else {
-                    edit_otp.setError("Enter Otp");
+//                                }
+//                            } else {
+//                                Toasty.error(context, "Otp Error Try Again").show();
+//                            }
+                    }
+                    progressDialog.dismiss();
                 }
             }
         });

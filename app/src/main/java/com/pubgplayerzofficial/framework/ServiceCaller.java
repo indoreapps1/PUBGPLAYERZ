@@ -107,7 +107,7 @@ public class ServiceCaller {
     }
 
     //    call All signup data
-    public void callOtpVerifiyService(final String firstName, final String userName, final String email, final String phone, final String password, final String code, final String otp, final String deviceId, final IAsyncWorkCompletedCallback workCompletedCallback) {
+    public void callOtpVerifiyService(final String firstName, final String userName, final String email, final String phone, final String password, final String code,final String deviceId, final IAsyncWorkCompletedCallback workCompletedCallback) {
         final String url = Contants.SERVICE_BASE_URL + Contants.otpverifiy;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -125,7 +125,7 @@ public class ServiceCaller {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("full_name", firstName);
-                params.put("code", otp);
+//                params.put("code", otp);
                 params.put("user_name", userName);
                 params.put("email", email);
                 params.put("mobile_no", phone);
