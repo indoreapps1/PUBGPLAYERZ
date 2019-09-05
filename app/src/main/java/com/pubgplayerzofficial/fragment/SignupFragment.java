@@ -286,6 +286,11 @@ public class SignupFragment extends Fragment {
             edit_phone.setError("Enter Valid Phone number");
             edit_phone.requestFocus();
             return false;
+
+        } else if (phone.contains("+91")) {
+            edit_phone.setError("Enter Valid Phone number");
+            edit_phone.requestFocus();
+            return false;
         } else if (pass.length() == 0) {
             edt_pass.setError("Enter Password");
             edt_pass.requestFocus();
